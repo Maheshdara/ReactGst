@@ -1,9 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-<<<<<<< HEAD
-=======
-// const middleware = require("./middleware");
->>>>>>> 0e89b0d096e798aa50a2aeb9d905aaf715fce711
 const jwt = require("jsonwebtoken");
 const AdminData = require("./models/AdminModel");
 const cors = require("cors");
