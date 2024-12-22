@@ -9,7 +9,13 @@ const { Seeds } = require("./models/Products");
 const Stock = require("./models/Stock");
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+origin:["https://deploy-mern-1whq-vercel-app"],
+methods:["Post","Get"],
+Credentials:true
+}
+))
 app.use(express.json());
 
 const PORT = process.env.PORT || 8000;
