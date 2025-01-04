@@ -22,13 +22,13 @@ const InvoiceHistory = () => {
     debugger
     let apiUrl
     if(page.current === "pesticides-invoice-history"){
-      apiUrl = "http://localhost:8000/pescidesinvoicedata"
+      apiUrl = "https://backend-26yf.onrender.com/pescidesinvoicedata"
     }
     if(page.current === "fertilizer-invoice-history"){
-      apiUrl = "http://localhost:8000/fertilizerinvoicedata"
+      apiUrl = "https://backend-26yf.onrender.com/fertilizerinvoicedata"
     }
     if(page.current === "seed-invoice-history"){
-      apiUrl = "http://localhost:8000/seedsinvoiceedata"
+      apiUrl = "https://backend-26yf.onrender.com/seedsinvoiceedata"
     }
     try {
       const response = await axios.get(apiUrl);
