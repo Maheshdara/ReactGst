@@ -17,7 +17,7 @@ const LoginPage = () => {
       password: password
     };
     try {
-      const response = await axios.post("http://localhost:8000/login", body);
+      const response = await axios.post("https://backend-26yf.onrender.com/login", body);
       console.log(response.data.token); // Assuming response contains a token
       if (response.data.token) {
         setIsLoggedIn(true);
