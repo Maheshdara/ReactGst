@@ -19,7 +19,7 @@ const SeedsHistory = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/seedsinvoiceedata");
+      const response = await axios.get("https://backend-26yf.onrender.com/seedsinvoiceedata");
       setData(response.data);
     } catch (error) {
       console.log(error, "Error while fetching seeds data");
@@ -28,7 +28,7 @@ const SeedsHistory = () => {
 
   const fetchData2 = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/pescidesinvoicedata");
+      const response = await axios.get("https://backend-26yf.onrender.com/pescidesinvoicedata");
       setData2(response.data);
     } catch (error) {
       console.log(error, "Error while fetching pesticides data");
@@ -37,7 +37,7 @@ const SeedsHistory = () => {
 
   const fetchData3 = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/fertilizerinvoicedata");
+      const response = await axios.get("https://backend-26yf.onrender.com/fertilizerinvoicedata");
       setData3(response.data);
     } catch (error) {
       console.log(error, "Error while fetching fertilizers data");
