@@ -21,7 +21,7 @@ const StockTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/stock"); // Update the endpoint as needed
+        const response = await axios.get("https://backend-26yf.onrender.com/stock"); // Update the endpoint as needed
         setData(response.data);
       } catch (error) {
         console.error("Error fetching stock data:", error);
@@ -64,17 +64,17 @@ const StockTable = () => {
     try {
       if (isEditing) {
         await axios.put(
-          `http://localhost:8000/editstock/${currentProduct}/${currentSubproduct.name}/${currentSubproduct._id}`,
+          `https://backend-26yf.onrender.com/editstock/${currentProduct}/${currentSubproduct.name}/${currentSubproduct._id}`,
           {
             subproductname: formValues.subproductname,
             quantity: formValues.quantity,
           }
         );
       } else {
-        await axios.post("http://localhost:8000/stock", formValues); 
+        await axios.post("https://backend-26yf.onrender.com/stock", formValues); 
       }
       handleClose();
-      const response = await axios.get("http://localhost:8000/stock"); 
+      const response = await axios.get("https://backend-26yf.onrender.com/stock"); 
       setData(response.data);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -93,9 +93,9 @@ const StockTable = () => {
     debugger;
     try {
       await axios.delete(
-        `http://localhost:8000/stock/${product}/subproduct/${subproductId}`
+        `https://backend-26yf.onrender.com/stock/${product}/subproduct/${subproductId}`
       );
-      const response = await axios.get("http://localhost:8000/stock");
+      const response = await axios.get("https://backend-26yf.onrender.com/stock");
       setData(response.data);
     } catch (error) {
       console.error("Error deleting subproduct:", error);
