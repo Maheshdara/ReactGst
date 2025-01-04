@@ -39,13 +39,13 @@ const Invoice = () => {
     // debugger
     let apiUrl;
     if (state === "Pesticides") {
-      apiUrl = "http://localhost:8000/pescidesinvoicedata";
+      apiUrl = "https://backend-26yf.onrender.com/pescidesinvoicedata";
     }
     if (state === "Fertilizers") {
-      apiUrl = "http://localhost:8000/fertilizerinvoicedata";
+      apiUrl = "https://backend-26yf.onrender.com/fertilizerinvoicedata";
     }
     if (state === "Seed") {
-      apiUrl = "http://localhost:8000/seedsinvoiceedata";
+      apiUrl = "https://backend-26yf.onrender.com/seedsinvoiceedata";
     }
 
     try {
@@ -163,13 +163,13 @@ const Invoice = () => {
 
     let apiUrl;
     if (state === "Pesticides") {
-      apiUrl = "http://localhost:8000/pesticidesinvoice";
+      apiUrl = "https://backend-26yf.onrender.com/pesticidesinvoice";
     }
     if (state === "Fertilizers") {
-      apiUrl = "http://localhost:8000/fertilizerinvoice";
+      apiUrl = "https://backend-26yf.onrender.com/fertilizerinvoice";
     }
     if (state === "Seed") {
-      apiUrl = "http://localhost:8000/seedsinvoice";
+      apiUrl = "https://backend-26yf.onrender.com/seedsinvoice";
     }
 
     try {
