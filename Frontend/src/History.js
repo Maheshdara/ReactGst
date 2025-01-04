@@ -18,7 +18,7 @@ const History = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/customersdata");
+      const response = await axios.get("https://backend-26yf.onrender.com/customersdata");
       setData(response.data);
       console.log(response.data, "data");
     } catch (error) {
