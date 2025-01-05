@@ -15,6 +15,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Invoice from "./Invoices/Invoice";
 import InvoiceHistory from "./History/InvoiceHistory";
 import ViewInvoice from "./ViewInvoice/ViewInvoice";
+import { Link } from "react-router-dom";
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/stock">Stock</Nav.Link>
+            // <Nav.Link href="/stock">Stock</Nav.Link>
+<Nav.Link as={Link} to="/stock">Stock</Nav.Link>
             <NavDropdown title="History" id="basic-nav-dropdown">
               <NavDropdown.Item href="/pesticides-invoice-history" >Pesticides History</NavDropdown.Item>
               <NavDropdown.Item href="/fertilizer-invoice-history">
